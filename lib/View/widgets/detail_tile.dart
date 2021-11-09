@@ -70,7 +70,10 @@ class secondListTile extends StatelessWidget {
                   textAlign: TextAlign.start,
                 ),
                 Text(
-                  dataController.data[dataController.index].list[index]['time'],
+                  dataController.data[dataController.index].list[index]
+                          ['time'] +
+                      dataController.data[dataController.index].list[index]
+                          ['date'],
                   style: const TextStyle(color: Colors.indigo),
                 ),
                 if (dataController.data[dataController.index].list[index]
