@@ -1,0 +1,6 @@
+{
+    "editor.renderLineHighlight": "none",
+    "editor.renderLineHighlightOnlyWhenFocus": true,
+    "markdown.preview.lineHeight": 1,
+    "diffEditor.renderIndicators": false
+}
