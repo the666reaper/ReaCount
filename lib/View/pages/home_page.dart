@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:reacount_2/View/Themes/theme_controller.dart';
+import 'package:reacount_2/View/widgets/home_add_edit.dart';
 import 'package:reacount_2/View/widgets/home_app_bar.dart';
 import 'package:reacount_2/View/widgets/home_view.dart';
 
@@ -16,7 +17,11 @@ class HomePage extends GetView {
         return Scaffold(
             backgroundColor: themeController.theme.backgroundColor,
             appBar: AppBars.HomeAppBar,
-            body: const HomeView());
+            body: const HomeView(),
+            floatingActionButton: FloatingActionButton(onPressed: () {
+              showDialog(context: context, builder: (context) => const HomePageAddOrEdit(isEditing: false),);
+            },),
+            );
       },
     );
   }
