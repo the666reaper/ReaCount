@@ -41,7 +41,7 @@ class HomeTile extends GetView {
       FocusedMenuItem(
           title: Text('edit'),
           onPressed: () {
-            Get.dialog(HomePageAddOrEdit(isEditing: true));
+            HomePageAddOrEdit(isEditing: true);
           }),
       FocusedMenuItem(
           title: Text('delete'),
