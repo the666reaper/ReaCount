@@ -18,8 +18,10 @@ class HomePage extends GetView {
             backgroundColor: themeController.theme.backgroundColor,
             appBar: AppBars.HomeAppBar,
             body: const HomeView(),
-            floatingActionButton: FloatingActionButton(onPressed: () {
-              showDialog(context: context, builder: (context) => const HomePageAddOrEdit(isEditing: false),);
+            floatingActionButton: FloatingActionButton(
+              child: const Icon(Icons.add),
+              onPressed: () {
+              Get.dialog(const HomePageAddOrEdit(isEditing: false,));
             },),
             );
       },

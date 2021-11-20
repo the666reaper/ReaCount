@@ -9,9 +9,9 @@ import 'package:reacount_2/View/widgets/home_add_edit.dart';
 import 'package:reacount_2/View/widgets/home_delete.dart';
 import 'package:reacount_2/Controller/data_controller.dart';
 
-class HomeTile extends GetResponsiveView {
+class HomeTile extends GetView {
   final int index;
-  HomeTile(this.index, {Key? key}) : super(key: key);
+  const HomeTile(this.index, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
