@@ -15,15 +15,16 @@ class HomePage extends GetView {
       initState: (_) {},
       builder: (themeController) {
         return Scaffold(
-            backgroundColor: themeController.theme.backgroundColor,
-            appBar: AppBars.HomeAppBar,
-            body: const HomeView(),
-            floatingActionButton: FloatingActionButton(
-              child: const Icon(Icons.add),
-              onPressed: () {
-              Get.dialog(const HomePageAddOrEdit(isEditing: false,));
-            },),
-            );
+          backgroundColor: themeController.theme.backgroundColor,
+          appBar: AppBars.HomeAppBar,
+          body: const HomeView(),
+          floatingActionButton: FloatingActionButton(
+            child: const Icon(Icons.add),
+            onPressed: () {
+              const HomePageAddOrEdit(isEditing: false);
+            },
+          ),
+        );
       },
     );
   }
