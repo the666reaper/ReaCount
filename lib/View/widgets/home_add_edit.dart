@@ -19,10 +19,7 @@ class _HomePageAddOrEditState extends State<HomePageAddOrEdit> {
 
   @override
   Widget build(BuildContext context) {
-    return AlertDialog(
-      title: Text((widget.isEditing) ? 'edit list' : 'add list'),
-      content: Center(
-        child: Column(
+    return Column(
           children: [
             const Text('Name:'),
             TextFormField(
@@ -53,11 +50,9 @@ class _HomePageAddOrEditState extends State<HomePageAddOrEdit> {
             const Text('Initial type:'),
             // ignore: todo
             //TODO:add Types to app
+            Row(children:[save(widget.isEditing), cancel()],)
           ],
-        ),
-      ),
-      actions: [save(widget.isEditing), cancel()],
-    );
+        );
   }
 
   Widget save(bool isEditing) {
