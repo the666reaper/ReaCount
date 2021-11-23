@@ -21,11 +21,7 @@ class HomePage extends GetView {
           floatingActionButton: FloatingActionButton(
             child: const Icon(Icons.add),
             onPressed: () {
-              showDialog(
-                context: context,
-                builder: (context) => const HomePageAddOrEdit(isEditing: false),
-                
-              );
+              Get.dialog(const HomePageAddOrEdit(isEditing: false));
             },
           ),
         );
